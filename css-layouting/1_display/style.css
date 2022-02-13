@@ -1,0 +1,123 @@
+/* 
+# Sebenarnya fokus utama dari CSS Layouting adalah:
+- Box Model
+- Float
+- Position
+
+# Tapi selumnya harus sudah paham dulu: 
+- Display
+- Dimensi
+- Overflow
+
+# <div> dan <span>
+Sebelum memahami display kita juga harus paham <div> dan <span>.
+Tag <div> dan <span> tidak memiliki arti apapun, keduanya digunakan untuk 
+mengelompokkan tag-tag HTML dan memberikan informasi terhadap tag-tag tersebut
+
+body {
+  background-color: lightskyblue;
+}
+.logo {
+  background-color: aquamarine;
+}
+.navigasi {
+  background-color: coral;
+}
+.article {
+  background-color: burlywood;
+}
+.copyright {
+  background-color: aquamarine;
+}
+span {
+  background-color: yellow;
+}
+
+# Hubungannya dengan display?
+Setiap tag HTML punya default displaynta masing-masing
+
+<div></div> 
+div {
+    display: block;
+}
+
+<span></span>
+span {
+    display: inline;
+}
+
+# Pengertian Display :
+"setiap tag pada HTML berada di dalam sebuah KOTAK. 
+Properti DISPLAY pada CSS mengatur perilaku dari kotak tersebut"
+"setiap tag pada HTML memiliki nialai default untuk properti DISPLAY. Tetapi 
+kita juga dapat mengubah perilaku dari tag tersebut dengan mengganti value-nya"
+
+# display: inline, inline-block, block, none
+# inline :
+- element HTML yang secara default tidak menambahkan beris baru ketika dibuat
+- lebar dan tinggi elemennya sebesar konten yang ada di dalamnya
+    a {
+        background-color: burlywood;
+    }
+- kita tidak bisa mengatur tinggi dan lebar dari elemen inline (kecuali image bisa dirubah)
+    a {
+        width: 20px;
+    }
+    img {
+        width: 200px;
+    }
+- margin dan padding hanya mempengaruhi elemen secar horizontal, tidak vertikal
+# elemen inline: b, strong, i, em, a, span, sub, sup, button, input, label, select, textarea, ...
+# untuk mengecek inline / block dengan cara inspect element terus pilih computed
+# cara mengubah display dari inline ke block : gunakan INLINE-BLOCK
+
+# inline-block: 
+- tidak ada element yang secara default memiliki properti display: inline-block;
+- kita harus ubah secara manual properti tersebut
+- perilaku dasarnya sama dengan elemen inline
+- perbedaannya, elemen inline-block dapat kita atur tinggi dan lebarnya
+a {
+  background-color: chartreuse;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+}
+
+# block: 
+- elemen HTML yang secara default menambhakan baris baru ketika dibuat
+- jika diatur lebarnya, maka lebar default dari elemen block akan memenuhi lebar
+  dari browser / parent-nya
+- kita dapat mengatur tinggi dan lebar dari elemen block 
+- di dalam elemen block, kita dapat menyimpan tag dengan elemen inline, inline-block,
+  atau bahkan block lagi
+# elemen block: h1-h6, p, ol, ul, li, form, hr, div, ...
+.article {
+  background-color: salmon;
+  width: 500px;
+}
+.article h2 {
+  background-color: yellow;
+}
+
+# none : digunakan untuk menghilangkan sebuah elemen
+img {
+  display: none;
+}
+
+# mengubah display :
+<div class="navigasi-2">
+    <ul>
+    <li><a href="#">Link 1</a></li>
+    <li><a href="#">Link 2</a></li>
+    <li><a href="#">Link 3</a></li>
+    <li><a href="#">Link 4</a></li>
+    <li><a href="#">Link 5</a></li>
+    </ul>
+</div>
+<li> : block
+<a> : inline
+mengubah <li> jadi inline: 
+.navigasi-2 li {
+  display: inline;
+}
+*/

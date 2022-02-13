@@ -1,0 +1,144 @@
+/* 
+# Float
+"merupakan properti pada CSS untuk mengatur posisi
+sebuah element. Sebuah element dapat dipaksa untuk 
+beradda disebelah kiri atau kanan dari parent/pembungkusnya
+dengan menggunakan properti ini"
+
+# Properti Float: 
+- none
+- left
+- right
+
+# normal flow vs out-of flow
+ini adalah perilaku element ketika kita beri CSS
+selama ini kita menggunakan normal flow (inline,
+inline-block, dan block)
+float ini termasuk ke dalam out-of flow (keluar
+dari jalurnya)
+Contoh 1: 
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+.satu,
+.dua,
+.tiga {
+  width: 100px;
+  height: 100px;
+}
+.satu {
+  background-color: salmon;
+}
+.dua {
+  background-color: greenyellow;
+  // float: left;
+  float: right;
+}
+.tiga {
+  background-color: deepskyblue;
+}
+
+Yang bisa dilakukan oleh float: 
+- text wrapping : membuat text mengelilingi gambar / elemen lain
+- image gallery : membuat serangkaian gambar menjadi galeri
+- multi-column layout : membuat halaman memiliki beberapa kolom
+- dll
+
+Contoh 2 (text wrapping) : 
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+img {
+  float: left;
+  float: right;
+  margin: 20px;
+}
+
+Contoh 3 (image gallery) :
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+.kotak {
+  width: 80px;
+  height: 80px;
+  background-color: greenyellow;
+  color: white;
+  text-align: center;
+  line-height: 80px;
+  font-size: 30px;
+  margin: 5px;
+  float: left;
+}
+
+Contoh 4 (multi-column layout) : 
+perhatikan lebar containernya berapa, harus sama
+misal 600, berarti 200+200+200 atau lainnya
+kalau ditambah pading maka akan berantakan karena 
+kotak sudah melebihi container
+tapi masih bisa dilakukan dengan menambahkan 
+properti box-sizing: border-box
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+.kiri {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  float: left;
+}
+.tengah {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.kanan {
+  width: 200px;
+  height: 200px;
+  background-color: deepskyblue;
+  float: left;
+}
+
+
+
+*/
+.container {
+  width: 600px;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+.kiri {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  float: left;
+}
+.tengah {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  float: left;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.kanan {
+  width: 200px;
+  height: 200px;
+  background-color: deepskyblue;
+  float: left;
+}

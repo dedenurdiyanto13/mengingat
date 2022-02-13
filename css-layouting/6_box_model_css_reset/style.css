@@ -1,0 +1,188 @@
+/* 
+CSS Reset : 
+secara default ada beberapa elemen HTML yang 
+sudah memiliki margin default diantaranya 
+elemen body, h1-h6, p dll
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+}
+
+mengapa harus kita reset?
+1. untuk menghilangkan default margin yang memiliki
+nilai
+2. agar kita memiliki kendali penuh terhadap CSS
+yang kita buat
+
+Reset cara 1 (per element yg mau di reset)
+body, h1, p {
+  margin: 0;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+}
+kekurangan: tidak efektif karena yang direset
+hanya element tertentu saja
+
+Reset cara 2 (dengan menggunakan tanda *)
+* {
+  margin: 0;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+}
+kekurangan : tidak disarankan karena element yg tidak
+ingin kita reset ikut terkena reset juga dan ini
+memperberat website
+
+Reset cara 3 : (css reset meyer)
+seperti contoh di bawah ini
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+}

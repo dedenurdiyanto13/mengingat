@@ -1,0 +1,150 @@
+/* 
+Margin : 
+- cara pakai 
+- overlapping margin
+- negatif margin
+- auto
+- shorthand
+
+- Cara pakai: 
+Kita akan memberi margin pada .satu 
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 150px;
+}
+hasilnya kotak memiliki margin di setiap sisinya
+untuk mengetahui value marginnya bisa dengan
+inspect element lalu pilih computed
+
+- Overlapping  Margin : 
+terjadi saat kita menggabungkan dua buah margin, biasanya
+kiri-kanan atau atas-bawah. 
+Contoh: 
+.satu kita tambahkan margin-bottom: 150px;
+.dua kita tambahkan margin-top: 100px;
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-right: 50px;
+  margin-bottom: 150px;
+}
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-top: 100px;
+}
+hasilnya tidak berubah karena yang diambil
+adalah margin yang lebih besar jadi bukan 
+ditambahkan (150 + 100 = 250) ini unntuk 
+kasus secara vertikal
+Mengubah kotak menjadi horizontal:
+div {
+  display: inline-block;
+}
+hasilnya sekarang div menjadi inline (sejajar horizontal)
+tapi ada keanehan saat menggunakan inline-block
+yaitu pada setiap kota ada jarak padahal kita tidak
+menambahkan margin. Untuk mengilangkan jaraknya 
+hialngkan spasi pada masing-masing tag di file
+HTMLnya
+<div></div><div></div><div></div>
+secara horizontal margin agan ditambahkan: 
+.satu kita tambahkan margin-right: 30px;
+.dua kita tambahkan margin-left: 20px;
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-right: 30px;
+}
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-left: 20px;
+}
+maka hasilnya ditambahkan (30 + 20 = 50)
+Kesimpulan: 
+margin-bottom(30) + margin-top(20) (vertikal) :
+yang dipilih adalah nilai margin yang 
+paling besar yaitu 30
+margin-right(30) + margin-left(20) (horizontal) : 
+maka nilainya akan dijumlahkan sehingg hasilnya 50
+
+- negatif margin
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-bottom: 50px;
+}
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-top: -80px;
+}
+hasilnya element .dua akan tertarik ke atas
+menembuas elemen .satu dan element dibawah 
+.dua akan ikut tertarik ke atas
+
+- auto 
+nilai margin yang bisa kita berikan khusus untuk
+margin kiri dan kanan yang mana hasilnya akan
+membuat elemen berada di tengah-tengah parent-nya
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+- shorthand 
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  margin: 30px 20px 10px 20px; // atas kanan bawah kiri (searah jarum jam)
+  margin: 30px 50px 20px; // atas kanan-kiri bawah
+  margin: 30px 50px; // atas-bawah kanan-kiri
+}
+
+*/
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  /* atas kanan bawah kiri (searah jarum jam) */
+  /* margin: 30px 20px 10px 20px; */
+  /* atas kanan-kiri bawah */
+  /* margin: 30px 50px 20px; */
+  /* atas-bawah kanan-kiri */
+  margin: 30px 50px;
+}
+.dua {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+}
+.tiga {
+  width: 50px;
+  height: 50px;
+  background-color: chartreuse;
+}

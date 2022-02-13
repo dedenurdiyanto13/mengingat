@@ -1,0 +1,113 @@
+/* 
+# Sebelum memahami dimensi dan overflow perlu memahami display
+- inline : secara default lebar dan tinggi tidak bisa diubah
+- block : secara default lebar dan tinggi bisa diubah
+- inline-block : mengubah inline menjadi block artinya bisa mengubah lebar dan tinggi
+                 dimana sebelumnya tidak bisa karena inline
+
+# DIMENSI : 
+Properti untuk dimensi ada 2, yaitu width dan height
+div {
+  width: 200px;
+  height: 200px;
+}
+hasinya tidak terlihat lebar dan tingginya padahal sebenarnya ada tapi transparan
+div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+}
+setelah diberi warna background hasilnya terlihat berupa kotak
+
+# satuan dimensi : 
+- px (pixel) : bernilai absolut : pasti 
+- % (percen) : relatif terhadap parent-nya / pembungkusnya
+- in (inci) : satuan di dunia nyata
+- cm (centi meter) : satuan di dunia nyata
+- mm (mili meter) : satuan di dunia nyata
+- pt (point) : untuk ukuran banner : satuan di dunia nyata
+- pc (pica) : untuk ukuran banner : satuan di dunia nyata
+
+div {
+  width: 100%;
+  height: 200px;
+  background-color: lightblue;
+}
+lebarnya akan memenuhi browser dan ketika browser diperkecil/diperbesar makan akan
+tetap mengikuti lebarnya browser sebesar 100% 
+NB : saat ini parent-nya adalah browser
+div {
+  width: 50%;
+  height: 200px;
+  background-color: lightblue;
+}
+hasilnya background akan setengah dari lebar browser dan ketika browser diperkecil/diperbesar makan akan
+tetap mengikuti lebarnya browser sebesar 50%
+NB : saat ini parent-nya adalah browser
+
+.satu {
+  width: 200px;
+  height: 200px;
+  background-color: blanchedalmond;
+}
+.dua {
+  width: 100%;
+  height: 50%;
+  background-color: salmon;
+}
+sekarang parent-nya kita buat sendiri yaitu div yang memiliki class satu
+yang emiliki lebar 200px
+.satu {
+  width: 500px;
+  height: 200px;
+  background-color: blanchedalmond;
+}
+.dua {
+  width: 80%;
+  height: 50%;
+  background-color: salmon;
+}
+hasinya child (.dua) akan selebar 80% dari 500px
+
+.satu {
+  width: 500px;
+  height: 200px;
+  background-color: blanchedalmond;
+}
+.dua {
+  width: 130%;
+  height: 50%;
+  background-color: salmon;
+}
+karena child melebihi dari parent-nya maka child akan menerobos melebihi batas parent-nya
+
+div {
+  width: 200px;
+  
+  background-color: salmon;
+}
+tidak menambahkan height sehingga tingginya relatif terhadap konten 
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+}
+konten keluar dari parent-nya karena tidak muat
+solusi agar tetap muat adalah dengan menggunakan properti OVERFLOW
+
+# OVERFLOW
+Dengan overflow memungkinkan mengatur element yang keluar dari parent-nya
+overflow : 
+- visible (default) : ketika konten keluar dari parent-nya maka akan diperlihatkan
+- auto : menambahkan scroll ketika konten sudah tidak muat, ketika konten cukup maka
+         scroll akan menghilang
+- hidden : konten yang melebihi parent akan disembunyikan
+- scroll : menambahkan scroll ketika konten sudah tidak muat, ketika konten cukup maka
+         scroll tetap ada
+div {
+  width: 200px;
+  height: 200px;
+  background-color: salmon;
+  overflow: auto;
+}
+*/

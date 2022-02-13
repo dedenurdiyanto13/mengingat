@@ -1,0 +1,176 @@
+/* 
+Padding : 
+Sama dengan margin ada left, top, right dan bottom
+bisa juga dengan menggunakan shorthand dengan mode
+searah jarum jam
+Jenis-jenis shorthand:
+- 4 value
+padding : 20px 30px 20px 30px; // top right bottom left
+- 3 value 
+padding : 20px 30px 20px; // top right-left bottom
+- 2 value 
+paddding : 20px 30px // top-bottom right-left
+Perbedaan margin dan padding:
+- padding tidak bisa memiliki nilai: 
+  - negatif (sedangkan margin bisa)
+  - auto (sedangkan margin bisa)
+  div { 
+  padding: -30px auto;
+  }
+  jika dipaksakan menambahkan niali negatif atau
+  auto pada padding maka tidak akan berpengaruh
+- padding menambah ukuran elemen (box yang dibuat)
+div {
+  width: 300px;
+  height: 300px;
+  background-color: salmon;
+  margin: 30px auto;
+  padding: 50px;
+}
+maka hasilnya
+width menjadi 400 (300 + 50 + 50)
+height menjadi 400 (300 + 50 + 50)
+Jika lebar dan tingginya ingin tetap 300
+setelah diberi padding sekalipun solusinya
+adalah kurangi width dan heightnya
+Misal 
+300 menjadi 200
+sehingga lebar dan tingginya setelah ditambah
+padding adalah 300 (200 + 50 + 50)
+
+Border:
+border: width style color; 
+border: tebal_bolder style_border warna_border;
+border: 5px solid black;
+border: 5px dotted black;
+border: 5px dashed black;
+border: 5px double black;
+
+Style border:
+- solid
+- dotted
+- dashed
+- double
+
+border: 5px solid black;
+border: 5px dotted black;
+border: 5px dashed black;
+border: 5px double black;
+
+atau penulisan masing-masing:
+border-width: 5px;
+border-style: solid;
+border-color: black;
+tapi penulisan ini sangat jarang digunakan
+
+atau kita juga bisa memberi border hanya
+di salah satu sisinya saja:
+border-top: 5px solid black;
+border-right: 5px dotted black;
+border-bottom: 5px dashed black;
+border-left: 5px double black;
+
+Note: 
+- sama dengan padding, border juga menambah 
+ukuran elemen
+- total dimensi = width/height + padding + border
+- sama dengan padding, jika width atau height
+ingin sama dengan ukuran semula setelah ditambah 
+padding dan border maka nilai width dan heightnya 
+dikurangi
+
+Box-sizing: 
+Solusi penambahan padding dan border
+Note :
+Sebenarnya yang perlu kita atur dari sebuah dimensi
+hanyalah lebarnya saja (width), adapun pengaturan
+tinggi itu sangat jarang sekali dilakukan karena
+secara otomatis akan menyesuaikan lebarnya konten 
+sehingga terlihat proporsional
+div {
+  width: 600px;
+  margin: 30px auto;
+}
+.satu {
+  background-color: salmon;
+  border: 5px solid yellow;
+  padding: 20px;
+}
+.dua {
+  background-color: lightgreen;
+  border: 10px dashed lightskyblue;
+  padding: 40px;
+}
+hasilnya ukurannya berbeda
+agar sama maka harus diukur lagi width dari 
+masing-masing class (.satu dan .dua)
+div {
+  width: 600px;
+  margin: 30px auto;
+}
+.satu {
+  width: 550px; // 600 - (2*20) - (2*5)
+  background-color: salmon;
+  border: 5px solid yellow;
+  padding: 20px;
+}
+.dua {
+  width: 500px; // 600 - (2*40) - (2*10)
+  background-color: lightgreen;
+  border: 10px dashed lightskyblue;
+  padding: 40px;
+}
+hasilnya element memiliki lebar yang sama
+tapi kekurangannya kita harus kalkulaasi secara 
+manual widthnya, belum lagi jika nilai border dan
+paddingnya berubah harus diitung ulang
+solusinya dengan menambahkan box-sizing: border-box
+ini akan membuat berapapun nilai border dan padding
+lebarnya akan tetap 600px 
+div {
+  width: 600px;
+  margin: 30px auto;
+  box-sizing: border-box;
+}
+.satu {
+  background-color: salmon;
+  border: 5px solid yellow;
+  padding: 20px;
+}
+.dua {
+  background-color: lightgreen;
+  border: 10px dashed lightskyblue;
+  padding: 40px;
+}
+*/
+
+/* padding dan border */
+/* div {
+  width: 300px;
+  height: 300px;
+  background-color: salmon;
+  margin: 30px auto;
+  padding: 50px;
+  border: 5px double black; 
+  border-top: 5px solid black;
+  border-right: 5px dotted black;
+  border-bottom: 5px dashed black;
+  border-left: 5px double black;
+} */
+
+/* box-sizing */
+div {
+  width: 600px;
+  margin: 30px auto;
+  box-sizing: border-box;
+}
+.satu {
+  background-color: salmon;
+  border: 5px solid yellow;
+  padding: 20px;
+}
+.dua {
+  background-color: lightgreen;
+  border: 10px dashed lightskyblue;
+  padding: 40px;
+}

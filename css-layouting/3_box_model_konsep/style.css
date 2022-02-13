@@ -1,0 +1,35 @@
+/* 
+# konsep box model: 
+- setiap element di halaman berada dalam sebuah box (kotak) 
+- kita bisa mengatur ukuran dan posisi kotak tersebut 
+- kita bisa memberi warna / gambar sebagai background kotak tersebut 
+
+# Kotak semua
+pada dasarnya semua element pada website adalah kotak
+untuk membuktikannya: 
+1. kunjungi salah satu website 
+2. lakukan inspect element
+3. beri css baru misalnya * { border: 1px solid red; }
+
+NB : di Mozilla ada fitur 3D view
+
+# "CSS box model mendefinisikan 'kotak' yang dihasilkan oleh sebuah elemen, 
+lalu menampilkannya sesuai dengn format visualnya"
+
+# Jadi kita akan menentukan:
+- warnanya apa?
+- mau diisi apa? tulisan atau gambar?
+- mau disimpan dimana posisinya?
+
+# Komponen box-model: 
+- margin : area transparan di sekitar kotak (di luar border)
+- padding : area transparan di dalam kotak (antara konten dan border)
+- border : batas di sekeliling content dan padding
+- content : content sebenarnya di dalam box, bisa berupa teks atau gambar
+
+Yang bisa kita atur propertinya menggunakan box model hanya 3, yaitu:
+- margin : (margin-top, margin-right, margin-bottom, margin-left, margin)
+- padding : (padding-top, padding-right, padding-bottom, padding-left, padding)
+- border : (border-top, border-right, border-bottom, border-left, border) 
+
+*/
